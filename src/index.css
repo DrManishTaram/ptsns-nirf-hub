@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* University NIRF Page Design System */
+
+@layer base {
+  :root {
+    --background: 40 20% 98%;
+    --foreground: 20 10% 20%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 20 10% 20%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 20 10% 20%;
+
+    --primary: 42 90% 50%;
+    --primary-foreground: 20 10% 15%;
+
+    --secondary: 25 85% 55%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 40 20% 94%;
+    --muted-foreground: 25 10% 45%;
+
+    --accent: 0 75% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 40 20% 90%;
+    --input: 40 20% 90%;
+    --ring: 42 90% 50%;
+
+    --radius: 0.75rem;
+
+    /* University Gold Palette */
+    --gradient-start: 42 90% 55%;
+    --gradient-mid: 25 85% 55%;
+    --gradient-end: 0 75% 60%;
+
+    --teal: 160 50% 45%;
+    --purple: 270 50% 55%;
+    /* Kept for variety but muted */
+    --pink: 330 60% 60%;
+    --blue: 210 60% 55%;
+    --orange: 30 90% 55%;
+
+    --gradient-hero: linear-gradient(135deg, hsl(42 90% 55% / 0.1) 0%, hsl(25 85% 55% / 0.1) 50%, hsl(0 75% 60% / 0.1) 100%);
+    --gradient-card: linear-gradient(135deg, hsl(42 90% 55% / 0.05) 0%, hsl(25 85% 55% / 0.05) 100%);
+    --gradient-text: linear-gradient(135deg, hsl(35 90% 45%) 0%, hsl(15 85% 50%) 50%, hsl(0 75% 50%) 100%);
+    --gradient-subtle: linear-gradient(135deg, hsl(45 50% 98%) 0%, hsl(25 30% 97%) 50%, hsl(0 20% 98%) 100%);
+
+    --shadow-card: 0 4px 24px -6px hsl(35 40% 20% / 0.08), 0 2px 8px -2px hsl(35 40% 20% / 0.04);
+    --shadow-card-hover: 0 16px 40px -10px hsl(35 50% 40% / 0.15), 0 6px 16px -6px hsl(35 40% 20% / 0.08);
+    --shadow-glow: 0 0 30px hsl(42 90% 50% / 0.3);
+
+    --font-display: 'Playfair Display', Georgia, serif;
+    --font-body: 'Inter', system-ui, sans-serif;
+
+    --sidebar-background: 40 20% 99%;
+    --sidebar-foreground: 20 10% 20%;
+    --sidebar-primary: 42 90% 50%;
+    --sidebar-primary-foreground: 20 10% 15%;
+    --sidebar-accent: 40 30% 94%;
+    --sidebar-accent-foreground: 42 90% 45%;
+    --sidebar-border: 40 20% 90%;
+    --sidebar-ring: 42 90% 50%;
+  }
+
+  .dark {
+    --background: 20 10% 8%;
+    --foreground: 40 20% 95%;
+
+    --card: 20 10% 12%;
+    --card-foreground: 40 20% 95%;
+
+    --popover: 20 10% 12%;
+    --popover-foreground: 40 20% 95%;
+
+    --primary: 42 90% 50%;
+    --primary-foreground: 20 10% 15%;
+
+    --secondary: 25 85% 65%;
+    --secondary-foreground: 20 10% 15%;
+
+    --muted: 20 10% 18%;
+    --muted-foreground: 25 10% 65%;
+
+    --accent: 42 90% 50%;
+    --accent-foreground: 20 10% 15%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 20 10% 20%;
+    --input: 20 10% 20%;
+    --ring: 42 90% 50%;
+
+    --sidebar-background: 20 10% 10%;
+    --sidebar-foreground: 40 20% 95%;
+    --sidebar-primary: 42 90% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 20 10% 15%;
+    --sidebar-accent-foreground: 42 90% 50%;
+    --sidebar-border: 20 10% 20%;
+    --sidebar-ring: 42 90% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-display);
+  }
+}
+
+@layer components {
+  .hero-gradient {
+    background: var(--gradient-hero);
+  }
+
+  .subtle-gradient {
+    background: var(--gradient-subtle);
+  }
+
+  .card-gradient {
+    background: var(--gradient-card);
+  }
+
+  .card-shadow {
+    box-shadow: var(--shadow-card);
+  }
+
+  .card-shadow-hover {
+    box-shadow: var(--shadow-card-hover);
+  }
+
+  .glow-shadow {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .text-gradient {
+    background: var(--gradient-text);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-gradient-blue-purple {
+    background: linear-gradient(135deg, hsl(220 80% 45%) 0%, hsl(280 70% 50%) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-gradient-purple-pink {
+    background: linear-gradient(135deg, hsl(280 70% 50%) 0%, hsl(340 75% 50%) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .btn-gradient {
+    background: linear-gradient(135deg, hsl(220 80% 55%) 0%, hsl(280 70% 55%) 100%);
+    transition: all 0.3s ease;
+  }
+
+  .btn-gradient:hover {
+    background: linear-gradient(135deg, hsl(220 80% 50%) 0%, hsl(280 70% 50%) 100%);
+    box-shadow: 0 8px 24px -6px hsl(280 70% 55% / 0.4);
+  }
+
+  .btn-gradient-pink {
+    background: linear-gradient(135deg, hsl(280 70% 55%) 0%, hsl(340 75% 55%) 100%);
+    transition: all 0.3s ease;
+  }
+
+  .btn-gradient-pink:hover {
+    background: linear-gradient(135deg, hsl(280 70% 50%) 0%, hsl(340 75% 50%) 100%);
+    box-shadow: 0 8px 24px -6px hsl(340 75% 55% / 0.4);
+  }
+
+  .border-gradient {
+    border: 2px solid transparent;
+    background: linear-gradient(white, white) padding-box,
+      linear-gradient(135deg, hsl(220 80% 55%), hsl(280 70% 55%), hsl(340 75% 55%)) border-box;
+  }
+
+  .animate-fade-up {
+    animation: fadeUp 0.6s ease-out forwards;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  .stagger-1 {
+    animation-delay: 0.1s;
+  }
+
+  .stagger-2 {
+    animation-delay: 0.2s;
+  }
+
+  .stagger-3 {
+    animation-delay: 0.3s;
+  }
+
+  .stagger-4 {
+    animation-delay: 0.4s;
+  }
+
+  .stagger-5 {
+    animation-delay: 0.5s;
+  }
+
+  .animate-fade-in-left {
+    animation: fadeInLeft 0.3s ease-out forwards;
+  }
+
+  @keyframes fadeInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(20px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+}
