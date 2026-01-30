@@ -66,34 +66,30 @@ const FeedbackSection = () => {
               href="https://www.nirfindia.org"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-between p-5 bg-white rounded-xl border border-border hover:border-primary/30 transition-all group card-shadow hover:card-shadow-hover"
+              className="flex items-center p-5 bg-white rounded-xl border border-border hover:border-primary/30 transition-all group card-shadow hover:card-shadow-hover gap-4"
             >
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center">
-                  <ExternalLink className="w-5 h-5 text-white" />
-                </div>
-                <div>
-                  <h4 className="font-semibold text-foreground">Official NIRF Portal</h4>
-                  <p className="text-muted-foreground text-sm">www.nirfindia.org</p>
-                </div>
+              <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center shrink-0">
+                <ExternalLink className="w-5 h-5 text-white" />
               </div>
-              <ExternalLink className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
+              <div className="flex-1 text-center">
+                <h4 className="font-semibold text-foreground">Official NIRF Portal</h4>
+                <p className="text-muted-foreground text-sm">www.nirfindia.org</p>
+              </div>
+              <ExternalLink className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors shrink-0" />
             </a>
 
             <a
               href="#home"
-              className="flex items-center justify-between p-5 bg-white rounded-xl border border-border hover:border-primary/30 transition-all group card-shadow hover:card-shadow-hover"
+              className="flex items-center p-5 bg-white rounded-xl border border-border hover:border-primary/30 transition-all group card-shadow hover:card-shadow-hover gap-4"
             >
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center">
-                  <Mail className="w-5 h-5 text-white" />
-                </div>
-                <div>
-                  <h4 className="font-semibold text-foreground">Contact University</h4>
-                  <p className="text-muted-foreground text-sm">Get in touch with us</p>
-                </div>
+              <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center shrink-0">
+                <Mail className="w-5 h-5 text-white" />
               </div>
-              <ExternalLink className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
+              <div className="flex-1 text-center">
+                <h4 className="font-semibold text-foreground">Contact University</h4>
+                <p className="text-muted-foreground text-sm">Get in touch with us</p>
+              </div>
+              <ExternalLink className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors shrink-0" />
             </a>
           </div>
         </div>
