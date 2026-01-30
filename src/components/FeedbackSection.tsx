@@ -40,19 +40,22 @@ const FeedbackSection = () => {
               </p>
 
               {/* Email Button */}
-              <a
-                href="mailto:ptsnsuniversity@gmail.com?subject=PTSNS NIRF Feedback"
-                className="inline-flex items-center gap-3 px-8 py-4 bg-white text-purple-600 font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all transform hover:scale-105"
-              >
-                <Send className="w-5 h-5" />
-                ptsnsuniversity@gmail.com
-              </a>
+              <div className="flex flex-col lg:flex-row items-center justify-center gap-4 lg:gap-6 mt-8">
+                {/* Email Button */}
+                <a
+                  href="mailto:ptsnsuniversity@gmail.com?subject=PTSNS NIRF Feedback"
+                  className="inline-flex items-center gap-3 px-8 py-4 bg-white text-purple-600 font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all transform hover:scale-105"
+                >
+                  <Send className="w-5 h-5" />
+                  ptsnsuniversity@gmail.com
+                </a>
 
-              {/* Subject Note */}
-              <div className="mt-6 inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-white/20 backdrop-blur-sm border border-white/30">
-                <span className="text-white/90 text-sm">
-                  Please mention subject as: <strong className="text-white">"PTSNS NIRF Feedback"</strong>
-                </span>
+                {/* Subject Note */}
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-white/20 backdrop-blur-sm border border-white/30 text-center">
+                  <span className="text-white/90 text-sm">
+                    Please mention subject as: <strong className="text-white">"PTSNS NIRF Feedback"</strong>
+                  </span>
+                </div>
               </div>
             </div>
           </div>
