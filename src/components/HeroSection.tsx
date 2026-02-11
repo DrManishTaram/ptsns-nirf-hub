@@ -1,6 +1,13 @@
 import { Award, ChevronDown } from "lucide-react";
 
 const HeroSection = () => {
+  const handleDownload = () => {
+    const link = document.createElement('a');
+    link.href = '/PTSNS_NIRF_2025-26.pdf';
+    link.download = 'PTSNS_NIRF_2025-26.pdf';
+    link.click();
+  };
+
   return (
     <section id="home" className="relative subtle-gradient py-20 lg:py-32 overflow-hidden">
       {/* Background Decorative Blobs */}
@@ -40,12 +47,12 @@ const HeroSection = () => {
             >
               Explore Our Rankings
             </a>
-            <a
-              href="#downloads"
-              className="px-8 py-4 btn-gradient text-white font-semibold rounded-xl transition-all transform hover:scale-105 animate-pulse"
+            <button
+              onClick={handleDownload}
+              className="px-8 py-4 btn-gradient text-white font-semibold rounded-xl transition-all transform hover:scale-105 animate-pulse cursor-pointer"
             >
               Download Data
-            </a>
+            </button>
           </div>
 
           {/* Stats */}

@@ -1,6 +1,13 @@
 import { Download, FileText, GraduationCap, Cpu, Beaker, Briefcase, Scale, Lightbulb, Leaf } from "lucide-react";
 
 const DownloadsSection = () => {
+  const handleDownload = () => {
+    const link = document.createElement('a');
+    link.href = '/PTSNS_NIRF_2025-26.pdf';
+    link.download = 'PTSNS_NIRF_2025-26.pdf';
+    link.click();
+  };
+
   const downloads = [
     { icon: GraduationCap, title: "PTSNS Overall", description: "Complete institutional data", gradient: "from-blue-500 to-purple-500" },
     { icon: Cpu, title: "Engineering Discipline", description: "Technical programs data", gradient: "from-cyan-500 to-blue-500" },
@@ -33,7 +40,8 @@ const DownloadsSection = () => {
           {downloads.filter(d => d.title === "PTSNS Overall").map((item, index) => (
             <button
               key={item.title}
-              className="group flex items-center gap-4 p-5 bg-white rounded-xl border border-border hover:border-primary/30 transition-all duration-300 card-shadow hover:card-shadow-hover text-left w-full"
+              onClick={handleDownload}
+              className="group flex items-center gap-4 p-5 bg-white rounded-xl border border-border hover:border-primary/30 transition-all duration-300 card-shadow hover:card-shadow-hover text-left w-full cursor-pointer"
             >
               <div className={`w-12 h-12 rounded-lg bg-gradient-to-br ${item.gradient} flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform shadow-sm`}>
                 <item.icon className="w-6 h-6 text-white" />
